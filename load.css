@@ -1,0 +1,135 @@
+
+  .loading-state {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#000;
+    font-size: 1.25rem;
+    font-family: 'K2D', sans-serif;
+    font-weight: 900;
+  }
+  #loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #loading-spinner .spinner {
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 5px solid #fff5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #loading-spinner .inner {
+    border-top: 5px solid #0f0;
+    border-bottom: 5px solid #0f0;
+    width: 70px;
+    height: 70px;
+    margin: -35px;
+    -webkit-animation: inner-spin 3s linear infinite;
+    animation: inner-spin 3s linear infinite;
+  }
+  #loading-spinner .outer {
+    border-right: 5px solid #f00;
+    border-left: 5px solid #f00;
+    width: 90px;
+    height: 90px;
+    margin: -45px;
+    -webkit-animation: outer-spin 3s linear infinite;
+    animation: outer-spin 3s linear infinite;
+  }
+  #loading-spinner .eye {
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: -25px;
+    background-color: #fff0;
+    background-image: url("https://semicon.github.io/img/logosm.png");
+    animation: eye-flash 3s infinite;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: eye-spin 3s linear infinite;
+    -webkit-animation: eye-spin 3s linear infinite
+  }
+  @-webkit-keyframes inner-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes inner-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes outer-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate-(180deg);
+    }
+  }
+  @keyframes outer-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+  @-webkit-keyframes eye-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    50% {
+      -webkit-transform: rotate(360deg);
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  @keyframes eye-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes eye-flash {
+    0% {
+      background-color: #eee;
+    }
+    50% {
+      background-color: #fff0;
+    }
+    100% {
+      background-color: #eee;
+    }
+  }
