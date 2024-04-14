@@ -7,7 +7,7 @@
               </div>
           </div>
       </div>
-      <div id="loading-text">KruChian</div>
+      <div id="loading-text"></div>
     </div>
   </div>`);
   $(window).on('load', function(){
