@@ -32,7 +32,7 @@
                   </div>
               </div>
           </div>
-          <div id="loading-text">KruChian</div>
+          <div id="loading-text"></div>
         </div>
       </div>`);
    document.querySelector(".wrapper").style.display = 'none'
