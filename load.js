@@ -36,4 +36,5 @@
         </div>
       </div>`);
    document.querySelector(".wrapper").style.display = 'none'
+   
   }
